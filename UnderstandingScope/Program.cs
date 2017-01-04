@@ -8,15 +8,19 @@ namespace UnderstandingScope
 {
     class Program
     {
-        private static string k = "";
+        private static string n = "";
 
         static void Main(string[] args)
         {
             string j = "";
+            string m = "";
             for (int i = 0; i < 10; i++)
             {
+                n = i.ToString();
                 j = i.ToString();
-                k = i.ToString();
+                int k = i + 6;
+                m = k.ToString();
+
                 Console.WriteLine(i);
 
                 if (i == 9)
@@ -24,10 +28,11 @@ namespace UnderstandingScope
                     string l = i.ToString();
                 }
                 //Console.WriteLine(l); l was defind inside the if statement can't call it outside
+                
             }
             //Console.Write(i);   outside of the block, won't work
-            Console.WriteLine("Outside of the for j: " + j); // j was defined outside of the for loop so can't be accessed outside
-            Console.WriteLine("Outside of the for k: " + k);
+            Console.WriteLine("Outside of the for j: " + j + 4); // j was defined outside of the for loop so can't be accessed outside
+            Console.WriteLine("Outside of the for m: " + m);
 
             HelpersMethod();
 
@@ -40,7 +45,7 @@ namespace UnderstandingScope
 
         static void HelpersMethod()
         {
-            Console.WriteLine("Value of k from the HelperMethod() k: " + k);
+            Console.WriteLine("Value of n from the HelperMethod() n: " + n);
         }
     }
 
